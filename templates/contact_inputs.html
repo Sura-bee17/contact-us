@@ -1,0 +1,37 @@
+{% load static %}
+
+<html>
+    <head>
+       <link rel="stylesheet"  type="text/css" href="{% static 'style1.css' %}" />
+    </head>
+    <body>
+        <img src={%static 'plaksha.png'%}><br><br>
+        <table>
+            
+            <th><h1><u>CONTACT US</u></h1><br>
+            <form action='savecontact.do', method='post'>
+                {% csrf_token %}
+
+                <label for="first_name">First Name</label><br>
+                <input type='text' name='first_name' required><br><br><br>
+                {% if error1 == True %}
+                    <p style="color:red;">{{error_message1}}</p><br><br>
+                {% endif %}
+                
+                <label for="first_name">Last Name</label><br>
+                <input type='text' name='last_name'><br><br><br>
+
+                <label for="first_name">Email Address</label><br>
+                <input type='email' name='email' required><br><br><br>
+                {% if error2 == True %}
+                    <p style="color:red;">{{error_message2}}</p><br><br>
+                {% endif %}
+
+                <label for="first_name">Phone Number</label><br>
+                <input type='tel' name='phone_number' pattern="[0-9]{8,10}"><br><br><br>
+
+                <input text-align="center" type='submit'></th>
+        </table>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,27 @@
+body {
+    background-color: teal;
+}
+
+img {
+    text-align: center;
+}
+
+h1 {
+    text-align: left;
+    color: white;
+}
+
+label {
+    text-align: left;
+    font-size: large;
+    color: aliceblue;
+}
+
+p {
+    color: red;
+    font: courier;
+}
+
+input {
+    color: black;
+}

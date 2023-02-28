@@ -1,0 +1,27 @@
+{% load static %}
+
+<html>
+    <head>
+        <link rel="stylesheet"  type="text/css" href="{% static 'style2.css' %}" />
+    </head>
+    <body>
+        <img src={%static 'plaksha.png'%}>
+        <h1><u>List of Contacts</u></h1><br><br><br><br>
+        <table class="center" border="1.5 px solid black">
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email Address</th>
+                <th>Phone Number</th>
+            </tr>
+            {% for contact in conts %}
+            <tr>
+                <td>{{contact.first_name}}</td>
+                <td>{{contact.last_name}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.phone_number}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

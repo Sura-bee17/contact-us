@@ -1,0 +1,17 @@
+<html>
+    <head>
+
+    </head>
+
+    <body>
+        <form action='add.do' method='post'>
+
+            {% csrf_token %}
+
+            Enter first number: <input name='num1' type='text'><br>
+            Enter second number: <input name='num2' type='text'><br>
+            <input type='submit'>
+        </form>
+    </body>
+
+</html>
