@@ -18,17 +18,20 @@
                     <p style="color:red;">{{error_message1}}</p><br><br>
                 {% endif %}
                 
-                <label for="first_name">Last Name</label><br>
+                <label for="last_name">Last Name</label><br>
                 <input type='text' name='last_name'><br><br><br>
 
-                <label for="first_name">Email Address</label><br>
+                <label for="email">Email Address</label><br>
                 <input type='email' name='email' required><br><br><br>
                 {% if error2 == True %}
                     <p style="color:red;">{{error_message2}}</p><br><br>
                 {% endif %}
 
-                <label for="first_name">Phone Number</label><br>
+                <label for="phone_number">Phone Number</label><br>
                 <input type='tel' name='phone_number' pattern="[0-9]{8,10}"><br><br><br>
+                {% if error3 == True %}
+                    <p style="color:red;">{{error_message3}}</p><br><br>
+                {% endif %}
 
                 <input text-align="center" type='submit'></th>
         </table>
